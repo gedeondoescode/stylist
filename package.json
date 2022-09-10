@@ -1,5 +1,5 @@
 {
-  "name": "stylist",
+  "name": "stylist-monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -10,7 +10,14 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "web": "pnpm --filter @core/web",
+    "web:build": "pnpm --filter @core/web run build",
+    "web:dev": "pnpm --filter @core/web run dev",
+    "web:start": "pnpm --filter @core/web run start"
+
+
+
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
