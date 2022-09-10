@@ -7,17 +7,18 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --parallel",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "web": "pnpm --filter @core/web",
     "web:build": "pnpm --filter @core/web run build",
     "web:dev": "pnpm --filter @core/web run dev",
-    "web:start": "pnpm --filter @core/web run start"
-
-
-
+    "web:start": "pnpm --filter @core/web run start",
+    "server": "pnpm --filter @core/server",    
+    "server:build": "pnpm --filter @core/server run build",
+    "server:dev": "pnpm --filter @core/server run dev",
+    "server:start": "pnpm --filter @core/server run start"        
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
